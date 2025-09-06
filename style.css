@@ -1,0 +1,67 @@
+body {
+    --primary-color: #3A3042;
+    --secondary-color: #DB9D47;
+    --accent-color: #FF784F;
+
+    background-color: var(--primary-color);
+}
+
+body.sesaonal-promo {
+    --primary-color: #87A878;
+    --secondary-color: #B0BC98;
+    --accent-color: #C7CCB9;
+
+    background-color: var(--primary-color);
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: .1fr repeat(3, 1fr) .1fr;
+    grid-template-rows: .4fr .2fr .8fr 3fr;
+    gap: .5em .2em;
+    grid-template-areas: 
+    ". a a a ."
+    ". b b b ."
+    ". c c c ."
+    ". d d d .";
+}
+
+.categories {
+    grid-area: a;
+}
+
+.categories-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.filter-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+img {
+    max-width: 50%;
+}
+
+.filters {
+    grid-area: b;
+}
+
+.promotions {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em;
+    grid-area: c;
+    background-color: var(--secondary-color);
+}
+
+.offerings {
+    grid-area: d;
+    display: grid;
+    grid-template-columns: repeat(6, .5fr);
+    grid-template-rows: 1fr 1fr;
+    gap: .2em;
+}
